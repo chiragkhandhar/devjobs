@@ -4,6 +4,7 @@ import "../Styles/HomePage.css";
 
 // Components
 import Header from "../Components/Header";
+import Search from "../Components/Search";
 
 function HomePage() {
   const { theme } = useContext(ThemeContext);
@@ -11,6 +12,7 @@ function HomePage() {
   return (
     <div theme={theme} className="container">
       <Header />
+      <Search />
     </div>
   );
 }

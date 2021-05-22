@@ -3,6 +3,7 @@
   --primary: #131822;
   --secondary: #19212d;
   --white: #ffffff;
+  --contrast-100p: #ffffff;
 }
 
 [theme="light"] {
@@ -10,6 +11,7 @@
   --primary: #f5f6f8;
   --secondary: #ffffff;
   --white: #ffffff;
+  --contrast-100p: #000000;
 }
 
 body {
