@@ -1,0 +1,8 @@
+@import url(../index.css);
+
+.container {
+    background-color: var(--primary);
+    height: 100vh;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}

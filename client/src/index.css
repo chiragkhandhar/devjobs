@@ -2,17 +2,19 @@
   --purple: #5865e0;
   --primary: #131822;
   --secondary: #19212d;
+  --white: #ffffff;
 }
 
 [theme="light"] {
   --purple: #5865e0;
   --primary: #f5f6f8;
   --secondary: #ffffff;
+  --white: #ffffff;
 }
 
 body {
   margin: 0;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
