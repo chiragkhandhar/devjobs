@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../Styles/Search.css";
 
 import axios from "axios";
@@ -15,6 +15,10 @@ function Search(props) {
     ftCB: false,
     page: 1,
   });
+
+  useEffect(() => {
+    api_getData();
+  }, []);
 
   const api_getData = () => {
     const URI = `positions.json?description=${state.searchText}&location=${state.searchLocation}&full_time=${state.ftCB}&page=${state.page}`;
