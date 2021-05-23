@@ -1,12 +1,5 @@
 @import url(../index.css);
 
-.container {
-  background-color: var(--primary);
-  min-height: 100vh;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
 .job-items {
   display: flex;
   flex-direction: row;

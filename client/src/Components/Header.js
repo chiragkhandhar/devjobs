@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { ThemeContext } from "../App";
-
+import { Link } from "react-router-dom";
 import "../Styles/Header.css";
 
 // Icons
@@ -17,12 +17,18 @@ function Header() {
   return (
     <div theme={theme} className="header-container">
       <div className="header-content">
-        <p className="site-title">devjobs</p>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <p className="site-title">devjobs</p>
+        </Link>
 
         <div className="theme-toggler">
           <IoSunny className="toggle-icons" />
           <label className="switch">
-            <input type="checkbox" onClick={toggleTheme} />
+            <input
+              type="checkbox"
+              onClick={toggleTheme}
+              checked={theme === "dark" ? true : false}
+            />
             <span className="slider round"></span>
           </label>
           <RiMoonFill className="toggle-icons" />
