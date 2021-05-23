@@ -10,7 +10,9 @@ function CompanyDetails(props) {
   dayjs.extend(relativeTime);
 
   const filterDesc = (desc) => {
-    return desc.split("\n").join();
+    desc = desc.split("\\n").join();
+   
+    return desc;
   };
   return (
     <div className="cd-container">
