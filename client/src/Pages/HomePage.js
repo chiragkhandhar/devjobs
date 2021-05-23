@@ -6,6 +6,7 @@ import "../Styles/HomePage.css";
 import Header from "../Components/Header";
 import Search from "../Components/Search";
 import JobItem from "../Components/JobItem";
+import Footer from "../Components/Footer";
 
 function HomePage() {
   const { theme } = useContext(ThemeContext);
@@ -39,6 +40,7 @@ function HomePage() {
           <JobItem />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

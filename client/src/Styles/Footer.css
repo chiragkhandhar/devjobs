@@ -1,0 +1,24 @@
+@import url(../index.css);
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer-note {
+  margin: 1rem 1rem 3rem 1rem;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--contrast-90p);
+}
+
+.chirag-khandhar {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--contrast-100p);
+}
+.chirag-khandhar:hover {
+  color: var(--purple);
+}
