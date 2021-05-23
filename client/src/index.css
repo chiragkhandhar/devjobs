@@ -1,5 +1,6 @@
 [theme="dark"] {
   --purple: #5865e0;
+  --purple-bg: #EEEFFC;
   --primary: #131822;
   --secondary: #19212d;
   --white: #ffffff;
@@ -9,6 +10,7 @@
 
 [theme="light"] {
   --purple: #5865e0;
+  --purple-bg: #EEEFFC;
   --primary: #f5f6f8;
   --secondary: #ffffff;
   --white: #ffffff;

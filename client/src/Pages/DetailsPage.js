@@ -4,6 +4,7 @@ import "../Styles/DetailsPage.css";
 
 // Components
 import Header from "../Components/Header";
+import CompanyHeader from "../Components/CompanyHeader";
 import Footer from "../Components/Footer";
 
 function DetailsPage(props) {
@@ -12,6 +13,7 @@ function DetailsPage(props) {
   return (
     <div theme={theme} className="container">
       <Header />
+      <CompanyHeader/>
       <Footer />
     </div>
   );
