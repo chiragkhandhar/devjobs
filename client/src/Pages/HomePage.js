@@ -21,6 +21,10 @@ function HomePage() {
     });
   };
 
+  const handlePagination = () => {
+    // Call API here
+  };
+
   return (
     <div theme={theme} className="container">
       <Header />
@@ -30,6 +34,11 @@ function HomePage() {
           <JobItem key={jobItem.id} jobItem={jobItem} />
         ))}
       </div>
+      {state.jobData.length === 50 && (
+        <button className="more-btn" onClick={handlePagination}>
+          Load More
+        </button>
+      )}
       <Footer />
     </div>
   );

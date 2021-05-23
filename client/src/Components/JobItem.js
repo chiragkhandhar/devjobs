@@ -11,7 +11,7 @@ function JobItem(props) {
   return (
     <div className="ji-container">
       {data.company_logo ? (
-        <img src={data.company_logo} className="ji-logo" />
+        <img src={data.company_logo} alt="logo" className="ji-logo" />
       ) : (
         <div className="ji-placeholder">
           <VscOrganization />

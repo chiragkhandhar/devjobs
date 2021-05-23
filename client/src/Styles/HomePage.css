@@ -15,6 +15,22 @@
   margin-right: 9rem;
 }
 
+.more-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin: auto;
+  margin-top: 1rem;
+  background-color: var(--purple);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 550px) {
   .job-items {
     margin-left: 1rem;
