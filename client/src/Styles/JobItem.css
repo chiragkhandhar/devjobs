@@ -1,0 +1,71 @@
+@import url(../index.css);
+
+.ji-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: var(--secondary);
+  border-radius: 5px;
+  padding: 2rem 1rem 1rem 1rem;
+  margin: 2rem 1rem 2rem 1rem;
+  width: 16rem;
+}
+
+.ji-logo {
+  position: absolute;
+  margin: -3rem 0 0 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.ji-line-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ji-time {
+  margin: 0;
+  font-size: 12px;
+  color: var(--contrast-90p);
+}
+
+.ji-sep {
+  margin: 0 0.5rem 0 0.5rem;
+  color: var(--contrast-90p);
+}
+
+.ji-type {
+  margin: 0;
+  font-size: 12px;
+  color: var(--contrast-90p);
+}
+
+.ji-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0.5rem 0 0 0;
+  color: var(--contrast-100p);
+}
+
+.ji-org {
+  margin: 0.5rem 0 0 0;
+  font-size: 12px;
+  color: var(--contrast-90p);
+}
+
+.ji-location {
+  margin: 1rem 0 0 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--purple);
+}
+
+@media only screen and (max-width: 550px) {
+  .ji-container {
+    margin: 2rem 0rem 2rem 0rem;
+    flex-grow: 1;
+  }
+}

@@ -60,7 +60,7 @@ function Search() {
             onChange={handleCBChange}
             className="cb-ft"
           ></input>
-          <label for="cb-ft" className="cb-text">
+          <label htmlFor="cb-ft" className="cb-text">
             Full Time Only
           </label>
         </div>

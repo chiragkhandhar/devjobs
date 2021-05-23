@@ -4,6 +4,7 @@
   --secondary: #19212d;
   --white: #ffffff;
   --contrast-100p: #ffffff;
+  --contrast-90p: #959ca6;
 }
 
 [theme="light"] {
@@ -12,6 +13,7 @@
   --secondary: #ffffff;
   --white: #ffffff;
   --contrast-100p: #000000;
+  --contrast-90p: #959ca6;
 }
 
 body {
