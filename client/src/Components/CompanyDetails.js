@@ -5,7 +5,11 @@ import relativeTime from "dayjs/plugin/relativeTime";
 function CompanyDetails(props) {
   const data = props.data;
   dayjs.extend(relativeTime);
-  
+
+  const handleClick = () => {
+    window.open(data.url);
+  };
+
   return (
     <div className="cd-container">
       <div className="cd-row-1">
@@ -20,7 +24,11 @@ function CompanyDetails(props) {
 
           <p className="cd-location">{data.location}</p>
         </div>
-        <button className="cd-apply-btn">Apply Now</button>
+        {data.url && (
+          <button className="cd-apply-btn" onClick={handleClick}>
+            Apply Now
+          </button>
+        )}
       </div>
       <div
         className="cd-desc"

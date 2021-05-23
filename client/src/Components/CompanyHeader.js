@@ -1,10 +1,15 @@
 import "../Styles/CompanyHeader.css";
+import { Link } from "react-router-dom";
 
 // Icons
 import { VscOrganization } from "react-icons/vsc";
 
 function CompanyHeader(props) {
   const data = props.data;
+
+  const handleClick = () => {
+    window.open(data.company_url);
+  };
   return (
     <div className="ch-container">
       {data.company_logo ? (
@@ -20,7 +25,11 @@ function CompanyHeader(props) {
         {data.company_url && <p className="ch-url">{data.company_url}</p>}
       </div>
 
-      <button className="ch-site-btn">Company Site</button>
+      {data.company_url && (
+        <button className="ch-site-btn" onClick={handleClick}>
+          Company Site
+        </button>
+      )}
     </div>
   );
 }

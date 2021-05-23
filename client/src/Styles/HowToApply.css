@@ -1,0 +1,37 @@
+@import url(../index.css);
+
+.hta-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--purple);
+  color: var(--white);
+  margin-top: 2rem;
+  margin-left: 25vw;
+  margin-right: 25vw;
+  padding: 2rem;
+  border-radius: 5px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  overflow-x: scroll;
+  word-break: break-all;
+  
+}
+
+.hta-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+a {
+  display:block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+@media only screen and (max-width: 550px) {
+  .hta-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}

@@ -7,6 +7,7 @@ import "../Styles/DetailsPage.css";
 import Header from "../Components/Header";
 import CompanyHeader from "../Components/CompanyHeader";
 import CompanyDetails from "../Components/CompanyDetails";
+import HowToApply from "../Components/HowToApply";
 import Footer from "../Components/Footer";
 
 function DetailsPage(props) {
@@ -39,6 +40,7 @@ function DetailsPage(props) {
       <Header />
       <CompanyHeader data={state.desc} />
       <CompanyDetails data={state.desc} />
+      <HowToApply data={state.desc} />
       <Footer />
     </div>
   );

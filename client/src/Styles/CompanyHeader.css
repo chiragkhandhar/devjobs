@@ -51,6 +51,7 @@
 }
 
 .ch-site-btn {
+  cursor: pointer;
   position: absolute;
   right: 1rem;
   border: none;
