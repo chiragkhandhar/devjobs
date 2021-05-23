@@ -1,21 +1,23 @@
 [theme="dark"] {
   --purple: #5865e0;
-  --purple-bg: #EEEFFC;
+  --purple-bg: #eeeffc;
   --primary: #131822;
   --secondary: #19212d;
   --white: #ffffff;
   --contrast-100p: #ffffff;
   --contrast-90p: #959ca6;
+  --contrast-95p: #D0D7DC;
 }
 
 [theme="light"] {
   --purple: #5865e0;
-  --purple-bg: #EEEFFC;
+  --purple-bg: #eeeffc;
   --primary: #f5f6f8;
   --secondary: #ffffff;
   --white: #ffffff;
   --contrast-100p: #000000;
   --contrast-90p: #959ca6;
+  --contrast-95p: #646667;
 }
 
 body {

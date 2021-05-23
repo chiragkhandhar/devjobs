@@ -1,0 +1,102 @@
+@import url(../index.css);
+
+.cd-container {
+  display: flex;
+  flex-direction: column;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background-color: var(--secondary);
+  margin-top: 2rem;
+  margin-left: 25vw;
+  margin-right: 25vw;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.cd-row-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cd-line-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cd-time {
+  margin: 0;
+  font-size: 12px;
+  color: var(--contrast-90p);
+}
+
+.cd-sep {
+  margin: 0 0.5rem 0 0.5rem;
+  color: var(--contrast-90p);
+}
+
+.cd-type {
+  margin: 0;
+  font-size: 12px;
+  color: var(--contrast-90p);
+}
+
+.cd-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0.5rem 0 0 0;
+  color: var(--contrast-100p);
+}
+
+.cd-location {
+  margin: 0.51rem 0 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--purple);
+}
+
+.cd-apply-btn {
+  cursor: pointer;
+  border: none;
+  background-color: var(--purple);
+  color: var(--white);
+  height: fit-content;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.cd-desc > p {
+  color: var(--contrast-95p);
+}
+
+.cd-desc > ul {
+  color: var(--contrast-95p);
+}
+.cd-desc > p > strong {
+  font-weight: 500;
+  color: var(--contrast-100p);
+}
+
+.cd-desc > p > a{
+  color: var(--purple);
+}
+
+@media only screen and (max-width: 550px) {
+  .cd-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .cd-row-1 {
+    flex-direction: column;
+  }
+
+  .cd-apply-btn {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+  }
+}
