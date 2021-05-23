@@ -6,6 +6,7 @@ function HowToApply(props) {
     <div className="hta-container">
       <p className="hta-title">How to Apply</p>
       <div
+      className="hta-details"
         dangerouslySetInnerHTML={{ __html: data.how_to_apply }}
       ></div>
     </div>

@@ -14,7 +14,6 @@
   transition: 0.4s;
   overflow-x: scroll;
   word-break: break-all;
-  
 }
 
 .hta-title {
@@ -22,8 +21,8 @@
   font-weight: 600;
 }
 
-a {
-  display:block;
+.hta-details a {
+  display: block;
   margin-top: 1rem;
   font-weight: 600;
   color: var(--white);
