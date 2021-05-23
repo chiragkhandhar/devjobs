@@ -8,6 +8,7 @@ import Header from "../Components/Header";
 import CompanyHeader from "../Components/CompanyHeader";
 import CompanyDetails from "../Components/CompanyDetails";
 import HowToApply from "../Components/HowToApply";
+import Apply from "../Components/Apply";
 import Footer from "../Components/Footer";
 
 function DetailsPage(props) {
@@ -26,12 +27,12 @@ function DetailsPage(props) {
           ...state,
           desc: res.data,
         });
-        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
   };
+
   useEffect(() => {
     api_getDetails(props.match.params.id);
   }, []);
@@ -41,6 +42,7 @@ function DetailsPage(props) {
       <CompanyHeader data={state.desc} />
       <CompanyDetails data={state.desc} />
       <HowToApply data={state.desc} />
+      <Apply data={state.desc} />
       <Footer />
     </div>
   );

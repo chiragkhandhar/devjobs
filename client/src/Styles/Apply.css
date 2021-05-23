@@ -1,0 +1,31 @@
+@import url(../index.css);
+
+.apply-conatiner {
+  display: flex;
+  margin-top: 2rem;
+  margin-left: 25vw;
+  margin-right: 25vw;
+  justify-content: flex-end;
+}
+
+.apply-btn {
+  cursor: pointer;
+  border: none;
+  background-color: var(--purple);
+  color: var(--white);
+  height: fit-content;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 550px) {
+  .apply-conatiner {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .apply-btn {
+    width: 100%;
+  }
+}

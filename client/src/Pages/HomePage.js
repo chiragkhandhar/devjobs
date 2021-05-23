@@ -14,7 +14,7 @@ function HomePage() {
   const [state, setState] = useState({
     jobData: [],
   });
-
+  const [isError, setError] = useState(false);
   const setJobData = (data) => {
     setState({
       ...state,
@@ -29,8 +29,8 @@ function HomePage() {
   return (
     <div theme={theme} className="container">
       <Header />
-      <Search setJobData={setJobData} />
-      {state.jobData.length > 0 ? (
+      <Search setJobData={setJobData} setError={setError} />
+      {!isError ? (
         <div className="job-items">
           {state.jobData.map((jobItem) => (
             <JobItem key={jobItem.id} jobItem={jobItem} />

@@ -58,6 +58,7 @@
   background-color: var(--purple-bg);
   color: var(--purple);
   padding: 1rem 2rem 1rem 2rem;
+  margin-right: 1rem;
   border-radius: 5px;
   font-size: 14px;
   font-weight: 600;
@@ -113,5 +114,6 @@
   .ch-site-btn {
     position: unset;
     margin-top: 2rem;
+    margin-right: 0;
   }
 }

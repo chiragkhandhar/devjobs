@@ -28,6 +28,8 @@ function Search(props) {
       .then((res) => {
         props.setJobData(res.data);
         console.log(res.data);
+        if (res.data.length > 0) props.setError(false);
+        else props.setError(true);
       })
       .catch((err) => {
         console.log(err);
