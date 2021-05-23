@@ -8,6 +8,7 @@ function Footer() {
         <a
           href="http://linkedin.com/in/chirag-khandhar/"
           target="_blank"
+          rel="noreferrer"
           className="chirag-khandhar"
         >
           Chirag Khandhar

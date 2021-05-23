@@ -1,17 +1,36 @@
 import { useState } from "react";
 import "../Styles/Search.css";
 
+import axios from "axios";
+
 // Icons
 import { GoSearch } from "react-icons/go";
 import { IoLocationSharp } from "react-icons/io5";
 import { RiFilter2Fill } from "react-icons/ri";
 
-function Search() {
+function Search(props) {
   const [state, setstate] = useState({
     searchText: "",
     searchLocation: "",
     ftCB: false,
+    page:1
   });
+
+  const api_getData = () => {
+    console.log(state);
+    const URI = `positions.json?description=${state.searchText}&location=${state.searchLocation}&full_time=${state.ftCB}&page=${state.page}`;
+
+    axios
+      .get(URI)
+      .then((res) => {
+        props.setJobData(res.data);
+        console.log(res.data);
+      })
+      .then(() => console.log(state))
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   const handleChange = (event) => {
     setstate({
@@ -26,8 +45,7 @@ function Search() {
     });
   };
   const handleSearch = () => {
-    console.log(state);
-    // Call API here
+    api_getData();
   };
   return (
     <div className="search-container">

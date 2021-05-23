@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ThemeContext } from "../App";
 import "../Styles/HomePage.css";
 
@@ -10,11 +10,21 @@ import Footer from "../Components/Footer";
 
 function HomePage() {
   const { theme } = useContext(ThemeContext);
+  const [state, setState] = useState({
+    jobData: [],
+  });
+
+  const setJobData = (data) => {
+    setState({
+      ...state,
+      jobData: data,
+    });
+  };
 
   return (
     <div theme={theme} className="container">
       <Header />
-      <Search />
+      <Search setJobData={setJobData} />
       <div className="job-items">
         <div className="job-item-row">
           <JobItem />
