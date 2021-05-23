@@ -1,0 +1,34 @@
+@import url(../index.css);
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background-color: var(--secondary);
+  margin-top: 2rem;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.error-img {
+  width: auto;
+  height: 25rem;
+  object-fit: contain;
+}
+
+.error-msg {
+  font-size: 18px;
+  text-align: center;
+  color: var(--contrast-90p);
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 550px) {
+  .error-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}

@@ -6,6 +6,7 @@ import "../Styles/HomePage.css";
 import Header from "../Components/Header";
 import Search from "../Components/Search";
 import JobItem from "../Components/JobItem";
+import Error from "../Components/Error";
 import Footer from "../Components/Footer";
 
 function HomePage() {
@@ -29,11 +30,15 @@ function HomePage() {
     <div theme={theme} className="container">
       <Header />
       <Search setJobData={setJobData} />
-      <div className="job-items">
-        {state.jobData.map((jobItem) => (
-          <JobItem key={jobItem.id} jobItem={jobItem} />
-        ))}
-      </div>
+      {state.jobData.length > 0 ? (
+        <div className="job-items">
+          {state.jobData.map((jobItem) => (
+            <JobItem key={jobItem.id} jobItem={jobItem} />
+          ))}
+        </div>
+      ) : (
+        <Error />
+      )}
       {state.jobData.length === 50 && (
         <button className="more-btn" onClick={handlePagination}>
           Load More
