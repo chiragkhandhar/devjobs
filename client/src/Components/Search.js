@@ -14,6 +14,8 @@ function Search(props) {
     searchLocation: "remote",
     ftCB: false,
     page: 1,
+    lat: "",
+    lon: "",
   });
 
   useEffect(() => {
@@ -27,10 +29,10 @@ function Search(props) {
       .get(URI)
       .then((res) => {
         props.setJobData(res.data);
-        console.log(res.data);
         if (res.data.length > 0) props.setError(false);
         else props.setError(true);
       })
+      .then(() => getGeoLocation())
       .catch((err) => {
         console.log(err);
       });
@@ -42,15 +44,32 @@ function Search(props) {
       [event.target.name]: event.target.value,
     });
   };
+
   const handleCBChange = (event) => {
     setstate({
       ...state,
       [event.target.name]: event.target.checked,
     });
   };
+
   const handleSearch = () => {
     api_getData();
   };
+
+  const getGeoLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        const longitude = position.coords.longitude;
+        const latitude = position.coords.latitude;
+        setstate({
+          ...state,
+          lat: latitude,
+          lon: longitude,
+        });
+      });
+    }
+  };
+
   return (
     <div className="search-container">
       <div className="col-1-container">
