@@ -79,6 +79,10 @@
   font-weight: 500;
   color: var(--contrast-100p);
 }
+.cd-desc > strong {
+  font-weight: 500;
+  color: var(--contrast-100p);
+}
 
 .cd-desc > p > a{
   color: var(--purple);

@@ -1,5 +1,6 @@
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { ThemeContext } from "../App";
+import axios from "axios";
 import "../Styles/DetailsPage.css";
 
 // Components
@@ -10,12 +11,34 @@ import Footer from "../Components/Footer";
 
 function DetailsPage(props) {
   const { theme } = useContext(ThemeContext);
-  const id = props.match.params.id;
+  const [state, setState] = useState({
+    desc: {},
+  });
+
+  const api_getDetails = (id) => {
+    const URI = `/positions/${id}.json`;
+
+    axios
+      .get(URI)
+      .then((res) => {
+        setState({
+          ...state,
+          desc: res.data,
+        });
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  useEffect(() => {
+    api_getDetails(props.match.params.id);
+  }, []);
   return (
     <div theme={theme} className="container">
       <Header />
-      <CompanyHeader />
-      <CompanyDetails />
+      <CompanyHeader data={state.desc} />
+      <CompanyDetails data={state.desc} />
       <Footer />
     </div>
   );

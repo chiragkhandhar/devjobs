@@ -4,9 +4,7 @@ import "../Styles/CompanyHeader.css";
 import { VscOrganization } from "react-icons/vsc";
 
 function CompanyHeader(props) {
-  const data = {
-    company_logo: false,
-  };
+  const data = props.data;
   return (
     <div className="ch-container">
       {data.company_logo ? (
@@ -18,8 +16,8 @@ function CompanyHeader(props) {
       )}
 
       <div className="ch-details">
-        <p className="ch-title">Egen Solutions</p>
-        <p className="ch-url">eagensolutions.co</p>
+        <p className="ch-title">{data.company}</p>
+        {data.company_url && <p className="ch-url">{data.company_url}</p>}
       </div>
 
       <button className="ch-site-btn">Company Site</button>
