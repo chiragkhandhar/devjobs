@@ -1,25 +1,34 @@
 import "../Styles/JobItem.css";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
 
-function JobItem() {
+// Icons
+import { VscOrganization } from "react-icons/vsc";
+
+function JobItem(props) {
+  const data = props.jobItem;
+  dayjs.extend(relativeTime);
   return (
     <div className="ji-container">
-      <img
-        src="https://source.unsplash.com/random"
-        alt="logo"
-        className="ji-logo"
-      />
+      {data.company_logo ? (
+        <img src={data.company_logo} className="ji-logo" />
+      ) : (
+        <div className="ji-placeholder">
+          <VscOrganization />
+        </div>
+      )}
 
       <div className="ji-line-1">
-        <p className="ji-time">5h ago </p>
+        <p className="ji-time">{dayjs(data.created_at).fromNow()} </p>
         <p className="ji-sep">•</p>
-        <p className="ji-type">Full Time</p>
+        <p className="ji-type">{data.type}</p>
       </div>
 
-      <p className="ji-title">Front End Engineer</p>
+      <p className="ji-title">{data.title}</p>
 
-      <p className="ji-org">Egen Solutions</p>
+      <p className="ji-org">{data.company}</p>
 
-      <p className="ji-location">Chicago, Maddison, San Diego</p>
+      <p className="ji-location">{data.location}</p>
     </div>
   );
 }

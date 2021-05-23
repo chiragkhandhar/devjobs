@@ -26,29 +26,9 @@ function HomePage() {
       <Header />
       <Search setJobData={setJobData} />
       <div className="job-items">
-        <div className="job-item-row">
-          <JobItem />
-          <JobItem />
-          <JobItem />
-        </div>
-
-        <div className="job-item-row">
-          <JobItem />
-          <JobItem />
-          <JobItem />
-        </div>
-
-        <div className="job-item-row">
-          <JobItem />
-          <JobItem />
-          <JobItem />
-        </div>
-
-        <div className="job-item-row">
-          <JobItem />
-          <JobItem />
-          <JobItem />
-        </div>
+        {state.jobData.map((jobItem) => (
+          <JobItem key={jobItem.id} jobItem={jobItem} />
+        ))}
       </div>
       <Footer />
     </div>

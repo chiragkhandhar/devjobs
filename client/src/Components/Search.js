@@ -11,13 +11,12 @@ import { RiFilter2Fill } from "react-icons/ri";
 function Search(props) {
   const [state, setstate] = useState({
     searchText: "",
-    searchLocation: "",
+    searchLocation: "remote",
     ftCB: false,
-    page:1
+    page: 1,
   });
 
   const api_getData = () => {
-    console.log(state);
     const URI = `positions.json?description=${state.searchText}&location=${state.searchLocation}&full_time=${state.ftCB}&page=${state.page}`;
 
     axios
@@ -26,7 +25,6 @@ function Search(props) {
         props.setJobData(res.data);
         console.log(res.data);
       })
-      .then(() => console.log(state))
       .catch((err) => {
         console.log(err);
       });

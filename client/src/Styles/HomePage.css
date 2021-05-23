@@ -9,17 +9,10 @@
 
 .job-items {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin-left: 9rem;
   margin-right: 9rem;
-}
-
-.job-item-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 @media only screen and (max-width: 550px) {

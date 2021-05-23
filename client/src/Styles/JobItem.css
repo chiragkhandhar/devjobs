@@ -8,7 +8,7 @@
   border-radius: 5px;
   padding: 2rem 1rem 1rem 1rem;
   margin: 2rem 1rem 2rem 1rem;
-  width: 16rem;
+  width: 24vw;
 }
 
 .ji-logo {
@@ -17,7 +17,25 @@
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 10px;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: var(--white);
+  box-shadow: 0 2.5px 10px rgba(0, 0, 0, 0.06),
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048);
+}
+
+.ji-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: var(--contrast-90p);
+  margin: -3rem 0 0 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 10px;
+  background-color: var(--white);
+  box-shadow: 0 2.5px 10px rgba(0, 0, 0, 0.06),
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048);
 }
 
 .ji-line-1 {
@@ -65,6 +83,7 @@
 
 @media only screen and (max-width: 550px) {
   .ji-container {
+    width: 100%;
     margin: 2rem 0rem 2rem 0rem;
     flex-grow: 1;
   }
