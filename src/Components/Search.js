@@ -23,7 +23,7 @@ function Search(props) {
   }, []);
 
   const api_getData = () => {
-    const URI = `positions.json?description=${state.searchText}&location=${state.searchLocation}&full_time=${state.ftCB}&page=${state.page}`;
+    const URI = `https://jobs.github.com/positions.json?description=${state.searchText}&location=${state.searchLocation}&full_time=${state.ftCB}&page=${state.page}`;
 
     axios
       .get(URI)
