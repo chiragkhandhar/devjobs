@@ -1,10 +1,15 @@
 # devjobs
+<p align="center">
+   <a style="text-decoration:none" href="https://chiragkhandhar.netlify.app">
+    <img src="https://img.shields.io/badge/View-App-blue" alt="View App" />
+  </a>
+
+</p>
 
 ## Installation Steps
 
 **Setup Frontend**
 
-- Navigate to client directory `cd client`
 - Run `npm install` to install all frontend dependencies.
 - Run `npm start` to start the front end
 
