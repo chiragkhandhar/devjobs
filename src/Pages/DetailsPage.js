@@ -18,8 +18,8 @@ function DetailsPage(props) {
   });
 
   const api_getDetails = (id) => {
-    const URI = `/positions/${id}.json`;
-
+    const url = `https://jobs.github.com/positions/${id}.json`;
+    const URI = `https://cors-anywhere.herokuapp.com/${url}`;
     axios
       .get(URI)
       .then((res) => {

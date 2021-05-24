@@ -23,8 +23,8 @@ function Search(props) {
   }, []);
 
   const api_getData = () => {
-    const URI = `positions.json?description=${state.searchText}&location=${state.searchLocation}&full_time=${state.ftCB}&page=${state.page}`;
-
+    const url = `https://jobs.github.com/positions.json?description=${state.searchText}&location=${state.searchLocation}&full_time=${state.ftCB}&page=${state.page}`;
+    const URI = `https://cors-anywhere.herokuapp.com/${url}`;
     axios
       .get(URI)
       .then((res) => {
