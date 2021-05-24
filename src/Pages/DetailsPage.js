@@ -18,7 +18,7 @@ function DetailsPage(props) {
   });
 
   const api_getDetails = (id) => {
-    const URI = `https://jobs.github.com/positions/${id}.json`;
+    const URI = `/positions/${id}.json`;
 
     axios
       .get(URI)
